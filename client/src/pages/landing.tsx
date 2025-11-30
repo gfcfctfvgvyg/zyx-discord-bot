@@ -24,7 +24,10 @@ export default function Landing() {
           <ZyxLogo size="md" />
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Button asChild data-testid="button-header-login">
+            <Button variant="outline" className="mr-2" asChild data-testid="button-header-login">
+              <a href="/dashboard">Dashboard</a>
+            </Button>
+            <Button asChild>
               <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604&permissions=8&scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">
                 <SiDiscord className="mr-2 h-4 w-4" />
                 Add to Discord
