@@ -3,12 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ZyxLogo } from "@/components/zyx-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { 
-  Shield, 
-  MessageSquare, 
-  BarChart3, 
-  Zap, 
-  Users, 
+import {
+  Shield,
+  MessageSquare,
+  BarChart3,
+  Zap,
+  Users,
   Clock,
   ChevronRight,
   Terminal,
@@ -25,7 +25,7 @@ export default function Landing() {
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <Button asChild data-testid="button-header-login">
-              <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604" target="_blank" rel="noopener noreferrer">
+              <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604&permissions=8&scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">
                 <SiDiscord className="mr-2 h-4 w-4" />
                 Add to Discord
               </a>
@@ -38,7 +38,7 @@ export default function Landing() {
         <section className="relative overflow-hidden py-20 md:py-32">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl opacity-50" />
-          
+
           <div className="relative max-w-7xl mx-auto px-4 md:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div className="space-y-8">
@@ -46,29 +46,31 @@ export default function Landing() {
                   <Zap className="mr-1.5 h-3.5 w-3.5" />
                   Powerful Discord Moderation
                 </Badge>
-                
+
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }} data-testid="text-hero-title">
                   Supercharge your Discord server with{" "}
                   <span className="bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
                     Zyx
                   </span>
                 </h1>
-                
+
                 <p className="text-lg md:text-xl text-muted-foreground max-w-lg" data-testid="text-hero-description">
-                  The ultimate bot for moderation, tickets, and server management. 
+                  The ultimate bot for moderation, tickets, and server management.
                   Keep your community safe and organized with powerful slash commands.
                 </p>
-                
+
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" className="px-8" asChild data-testid="button-hero-add">
-                    <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604" target="_blank" rel="noopener noreferrer">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604&permissions=8&scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">
                       <SiDiscord className="mr-2 h-5 w-5" />
                       Add to Discord
                     </a>
                   </Button>
-                  <Button size="lg" variant="outline" className="px-8" data-testid="button-hero-learn">
-                    Learn More
-                    <ChevronRight className="ml-2 h-4 w-4" />
+                  <Button size="lg" variant="outline" className="px-8" asChild data-testid="button-hero-learn">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604&permissions=8&scope=bot%20applications.commands">
+                      Learn More
+                      <ChevronRight className="ml-2 h-4 w-4" />
+                    </a>
                   </Button>
                 </div>
 
@@ -103,7 +105,7 @@ export default function Landing() {
                         </div>
                         <Badge variant="secondary" className="ml-auto">Online</Badge>
                       </div>
-                      
+
                       <div className="bg-muted/50 rounded-lg p-4 font-mono text-sm space-y-2">
                         <div className="text-muted-foreground"># moderation-logs</div>
                         <div className="flex items-start gap-2">
@@ -140,7 +142,7 @@ export default function Landing() {
           </div>
         </section>
 
-        <section className="py-20 bg-card/50" id="features">
+        <section id="features" className="py-20 bg-card/50">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="text-center space-y-4 mb-16">
               <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif" }} data-testid="text-features-title">
@@ -306,13 +308,15 @@ export default function Landing() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="px-8" asChild data-testid="button-cta-add">
-                <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604" target="_blank" rel="noopener noreferrer">
+                <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604&permissions=8&scope=bot%20applications.commands" target="_blank" rel="noopener noreferrer">
                   <SiDiscord className="mr-2 h-5 w-5" />
                   Add to Discord
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="px-8" data-testid="button-cta-support">
-                Join Support Server
+              <Button size="lg" variant="outline" className="px-8" asChild data-testid="button-cta-support">
+                <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604&permissions=8&scope=bot%20applications.commands">
+                  Join Support Server
+                </a>
               </Button>
             </div>
           </div>
