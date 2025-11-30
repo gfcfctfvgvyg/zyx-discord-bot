@@ -25,9 +25,9 @@ export default function Landing() {
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <Button asChild data-testid="button-header-login">
-              <a href="/api/login">
+              <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604" target="_blank" rel="noopener noreferrer">
                 <SiDiscord className="mr-2 h-4 w-4" />
-                Log In
+                Add to Discord
               </a>
             </Button>
           </div>
@@ -61,7 +61,7 @@ export default function Landing() {
                 
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" className="px-8" asChild data-testid="button-hero-add">
-                    <a href="/api/login">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604" target="_blank" rel="noopener noreferrer">
                       <SiDiscord className="mr-2 h-5 w-5" />
                       Add to Discord
                     </a>
@@ -306,7 +306,7 @@ export default function Landing() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button size="lg" className="px-8" asChild data-testid="button-cta-add">
-                <a href="/api/login">
+                <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604" target="_blank" rel="noopener noreferrer">
                   <SiDiscord className="mr-2 h-5 w-5" />
                   Add to Discord
                 </a>

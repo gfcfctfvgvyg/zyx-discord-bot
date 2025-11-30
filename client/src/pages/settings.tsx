@@ -142,7 +142,7 @@ export default function Settings() {
               </Button>
 
               <Button variant="outline" className="w-full justify-start" asChild data-testid="button-invite-bot">
-                <a href="/api/login">
+                <a href="https://discord.com/oauth2/authorize?client_id=1444747223505047604" target="_blank" rel="noopener noreferrer">
                   <Bot className="mr-2 h-4 w-4" />
                   Add to Another Server
                   <ExternalLink className="ml-auto h-4 w-4" />
