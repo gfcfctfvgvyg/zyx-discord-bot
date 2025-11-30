@@ -6,7 +6,7 @@ import {
   tickets,
   modActions,
 } from '../../shared/schema';
-import { db } from './db';
+import { db } from './db.js';
 import { eq, desc, and, gte } from 'drizzle-orm';
 
 export const storage = {

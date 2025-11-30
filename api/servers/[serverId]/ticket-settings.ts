@@ -1,10 +1,10 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getCurrentUser } from '../../_lib/auth';
-import { storage } from '../../_lib/storage';
+import { getCurrentUser } from '../../_lib/auth.js';
+import { storage } from '../../_lib/storage.js';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const user = getCurrentUser(req);
-  
+
   if (!user) {
     return res.status(401).json({ message: 'Unauthorized' });
   }
@@ -14,7 +14,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method === 'GET') {
     try {
       const settings = await storage.getTicketSettings(serverId as string);
-      
+
       if (!settings) {
         return res.status(200).json({
           serverId,
@@ -24,7 +24,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           welcomeMessage: 'Thank you for creating a ticket! Support will be with you shortly.',
         });
       }
-      
+
       return res.status(200).json(settings);
     } catch (error) {
       console.error('Get ticket settings error:', error);

@@ -1,10 +1,10 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getCurrentUser } from '../../_lib/auth';
-import { storage } from '../../_lib/storage';
+import { getCurrentUser } from '../../_lib/auth.js';
+import { storage } from '../../_lib/storage.js';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const user = getCurrentUser(req);
-  
+
   if (!user) {
     return res.status(401).json({ message: 'Unauthorized' });
   }
